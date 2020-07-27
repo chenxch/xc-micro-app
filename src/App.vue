@@ -1,7 +1,12 @@
+<!--
+ * @Descripttion: 
+ * @Author: chenxch
+ * @Date: 2020-07-27 09:07:18
+--> 
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="我是微应用"/>
   </div>
 </template>
 
