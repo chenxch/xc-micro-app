@@ -9,13 +9,13 @@ const sysName = utils.getSystemName(packageSysName);
 let mode = process.env.NODE_ENV; //当前启动模式
 const IS_PROD = ['production', 'prod'].includes(mode); //判断是否是生产模式
 const staticResource = IS_PROD ? `resources/${sysName}/static` : './';
-const BASE_URL = 'xc';
+const BASE_URL = IS_PROD ?'xc':'';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let htmlPlugin = new HtmlWebpackPlugin({
   entry: `src/main.js`,
   template: `public/index.html`,
-  filename: `${sysName}/index.html`,
+  filename: IS_PROD?`${sysName}/index.html`:'index.html',
   title: `${sysName}`,
   url: BASE_URL,
   // chunks: ['chunk-vendors', 'chunk-common', `${module}`],

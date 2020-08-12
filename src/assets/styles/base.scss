@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+body,
+/* div, */
+dl,
+dt,
+dd,
+ul,
+ol,
+/* li, */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+html {
+  color: #333;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cdcdcd;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2c1c1;
+}
+
+::-webkit-scrollbar-corner {
+  background: #f6f6f6;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr,
+acronym {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+
+q:before,
+q:after {
+  content: ''
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  border: 0;
+}
+
+// .el-input__inner, .el-button {
+//   @include border-radius(0);
+// }
+
+// .el-button--primary:not(.is-disabled) {
+//   background: $theme-color;
+//   border: 1px solid $theme-color;
+
+//   &:focus,
+//   &:hover {
+//     background: #1a84cc;
+//     border-color: #1a84cc;
+//   }
+// }
+
+.logTooltip.is-dark {
+  background: #3D414D;
+  opacity: 0.8;
+}
+
+.logTooltip {
+  left: 210px !important;
+  color: #B2B8CC !important;
+
+}
+
+//滚动条样式
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cdcdcd;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2c1c1;
+}
+
+::-webkit-scrollbar-corner {
+  background: #f6f6f6;
+}
+
+body {
+  height: 100vh;
+}
+.hg-full{
+  height: 100%;
+}

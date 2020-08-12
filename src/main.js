@@ -8,6 +8,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
+import './assets/styles/base.scss'
 
 Vue.config.productionTip = false
 
@@ -24,6 +25,8 @@ function render () {
 
 if (!window.__POWERED_BY_QIANKUN__) {
   render()
+}else{
+  store.state.kioks = false;
 }
 
 export async function bootstrap () {

@@ -5,25 +5,52 @@
 --> 
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <div>
-      <input v-model="text"/><button @click="sure">传给父应用</button>
-    </div>
-    <HelloWorld msg="我是微应用"/>
+    <el-container class="container">
+      <el-aside class="hg-full" :width="isCollapse?'64px':'250px'" v-if="$store.state.kioks">
+        <el-menu
+          default-active="2"
+          class="hg-full"
+          @select="handleSelect"
+          background-color="#304156"
+          text-color="#bfcbd9"
+          active-text-color="#1890ff"
+          :collapse="isCollapse"
+          router
+        >
+          <el-menu-item :index="item.path" v-for="item in $router.options.routes" :key="item.path">
+              <i class="el-icon-location"></i>
+              <span>{{item.name}}</span>
+              <!-- <el-menu-item index="1-1">选项1</el-menu-item> -->
+          </el-menu-item>
+        </el-menu>
+      </el-aside>
+      <div class="hm">
+        <el-header class="navbar" height="50px" v-if="$store.state.kioks">
+          <div class="hamburger-container">
+            <i :class="isCollapse?'el-icon-s-unfold':'el-icon-s-fold'"  @click="isCollapse=!isCollapse"></i>
+          </div>
+        </el-header>
+        <el-main class="main">
+          <router-view></router-view>
+        </el-main>
+      </div>
+    </el-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
   },
   data(){
     return{
-      text: ''
+      text: '',
+      isCollapse: false
     }
+  },
+  created(){
+    console.log(this.$router);
   },
   methods:{
     sure(){
@@ -40,11 +67,39 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  display: flex;
+  height: 100%;
+}
+.hm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.menu {
+  width: 250px;
+}
+.navbar {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0,21,41,.08);
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+}
+.hamburger-container {
+    line-height: 46px;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+    -webkit-tap-highlight-color: transparent;
+}
+.main{
+  flex: 1;
 }
 </style>
