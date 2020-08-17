@@ -1,7 +1,13 @@
+<!--
+ * @Descripttion: 
+ * @Author: chenxch
+ * @Date: 2020-08-11 15:32:23
+-->
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <el-button @click="goto">go about</el-button>
+    <HelloWorld msg="Welcome to Your Micro App"/>
   </div>
 </template>
 
@@ -13,6 +19,11 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  methods:{
+    goto(){
+      this.$router.push({path:'/about'})
+    }
   }
 }
 </script>

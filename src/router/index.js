@@ -1,3 +1,8 @@
+/*
+ * @Descripttion: 
+ * @Author: chenxch
+ * @Date: 2020-08-11 15:32:23
+ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
@@ -21,6 +26,7 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 
