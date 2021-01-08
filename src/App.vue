@@ -60,7 +60,8 @@ export default {
             console.log(this.$action);
             this.$action.setGlobalState(state);
         }
-      }
+      },
+      handleSelect(){}
   }
 }
 </script>
@@ -100,6 +101,6 @@ export default {
     -webkit-tap-highlight-color: transparent;
 }
 .main{
-  flex: 1;
+  position: relative;
 }
 </style>
