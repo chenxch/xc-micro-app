@@ -9,10 +9,7 @@ import router from './router'
 import store from './store'
 import './plugins/element.js'
 import './assets/styles/base.scss'
-import 'ag-grid-community/dist/styles/ag-grid.css'
-import 'ag-grid-community/dist/styles/ag-theme-balham.css'
-import './assets/styles/ag-styles.css'
-import './assets/fonts/fonts.css'
+
 
 Vue.config.productionTip = false
 

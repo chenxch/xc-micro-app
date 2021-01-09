@@ -35,7 +35,11 @@
 </template>
 
 <script>
-import { AgGridVue } from "ag-grid-vue";
+import { AgGridVue } from 'ag-grid-vue';
+import 'ag-grid-community/dist/styles/ag-grid.css'
+import 'ag-grid-community/dist/styles/ag-theme-balham.css'
+import '@/assets/styles/ag-styles.css'
+import '@/assets/fonts/fonts.css'
 
 export default {
   name: "Home",
